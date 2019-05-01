@@ -1,35 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- This is a comment. I can see it in the code, but it will not appear in the browser. -->
+    <!--This is a comment. I can see it in the code, but
+      it will not appear in the broswer. -->
 
-    <!-- 
-    The head section contains info for search engines and the browser and is not seen by site visitors.
-    -->
-
-    <meta charset="UTF-8">
-    <title>Exceptional Realty Group - Luxury Homes - About</title>
+      <!---The head section contains info for search engines
+      and the broswer and is not seen by site  visitors.
+        -->
+    <meta charset="UTF-8"> <!--tells browser to interpret code inside the page, as UTF-8 character set -->
+    <title> Exceptional Realty Group - Luxury Homes - About </title>
   </head>
   <body>
-    <!-- The body is the entire viewable area of the web page. For example we can see text, links, images, and media. -->
 
-    <h1>Exceptional</h1>
-    <h2>Realty Group</h2>
+  <header>
+        <h1>Exceptional </h1>
+        <h2> Realty Group </h2>
 
-    <!-- links -->
-    <a href="index.html">About</a> <a href="new-properties.html">New Properties</a> <a href="real-estate-listings.html">Listings</a> <a href="market-report.html">Market Report</a> <a href="contact.html">Contact</a> <a href="http://hud.gov" target="_blank">H.U.D.</a>
 
-    <img src="images/intro-pic.jpg" alt="A beautiful living room." title="Welcome to Exceptional Realty Group">
+    <!-- The body is the entire viewable area of the
+      webpage. For examples we can see text, links, images, and
+      media. --->
 
-    <!--
-    foldername/ = go inside the folder.
-    filename = use a file in the current folder.
-    ../ = leavethe current folder and go up to parent folder.
-    -->
+    <nav> <!--all the links in our  nav bc it's gonna be within the navigation -->
+          <!-- links -->
+          <!-- anchor el. to add links - "a"ction" of changing to dif html page -->
+          <!--href: tells broswer where we want link to go to -->
+          <!-- when ppl click About text it'll take them to the link -->
+          <a href="index.html">About</a>
+          <a href="new-properties.html">New Properties</a>
+          <a href="real-estate-listings.html">Listings</a>
+          <a href="market-report.html">Market Report</a>
+          <a href="contact.html">Contact</a>
+          <a href="#"></a>
+        <!-- these ^^^are all relative to the file folder, so relative links-->
+          <a href="http://hud.gov" target= "_blank" >H.U.D.</a>
+        <!-- ^ that is absolute link bc it leaves site -->
+        <!-- target: opens a new tab with that site so that we don't leave realty site-->
+    </nav>
+</header>
 
-    <p>Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit. Quae, perferendis nisi nihil debitis aspernatur doloribus quam eveniet quibusdam tempora esse! Repudiandae, assumenda, debitis doloribus ea eius ab at quae totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, inventore aliquid ipsam debitis nulla vitae omnis nemo quisquam? Obcaecati dolor ipsum distinctio reprehenderit aliquid autem ea vel provident voluptas nisi.</p>
+      <section id = "featured property"> <!-- you can section off the content with section el.
+        This section is about featured property, so give it that id -->
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, natus, nobis, tempore recusandae culpa deleniti dignissimos laborum perspiciatis exercitationem obcaecati dolores unde eveniet eius debitis perferendis provident porro. Ipsum, placeat.</p>
+            <!-- you have to explicitly tell browser (Src) where this img is -->
+            <!-- src points to relative path of the img -->
+            <!-- alt:  1) txt will be read  outloud for blind
+            <!- title :  puts caption when mouse  hovers over pic.  -->
+            <!-- tell it to go inside the img folder and load the intro-..file -->
+    <figure><!-- allows to surround content w. box + insert caption about content -->
+
+            <img src="images/intro-pic.jpg" alt="A beautiful living room."
+            title="Welcome to Exceptional Realty">
+            <figcaption>345 Carl Street Apt 12, Carol Rd. Brooklyn, NY - Photo by Denise Richards.</figcaption>
+    </figure>
+            <!-- foldername/ = go inside the folder
+            filename = use a file in the current folder.
+            ../ = leave the current folder & go up a level to the parent folder
+            <!- each time you do ../ it leaves and looks in the upper folder for whatever you put down-->
+
+            <p> Lorem ipsum dolor sit amet, <br> <!-- takes everything and push it down to next line-->consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat
+                non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+        <!--  <p>  Hello World. </p> <!- <p> to seperate and put it on seperate lines  <p>  Hello Moon. </p> -->
+      </section>
+
+      <section id ="promotional">
+          <!-- embed promo video -->
+          <!-- in opening tag of video el. - put control attr: so controls are always visible when video loads -->
+          <!-- add source el. & specify src attr = to point to video-go into videos folder, & put name  of video - "videos/real-estate.mp4" -->
+          <!-- type attr = what kind of video is it? mp4, ogv? -->
+          <!-- incase broswer doesn't support html content = add a clickable text link to download it from a site(Please upgrade browser"),
+            href attr= sets it to absolute link to go to  that site, target attr = _blank to open new tab for that site -->
+            <figure>
+              <video controls>
+                <source src="videos/real-estate.mp4" type="video/mp4">
+                  <source src="videos/real-estate.ogv" type="video/ogg">
+                   Your broswer does not support HTML5 video. <a href="http://broswerhappy.com" target="_blank"> Please upgrade your broswer.</a>
+              </video>
+            <figcaption>Exceptional Realty Group Promotional Video - Source: archive.org</figcaption>
+          </figure>
+      </section>
+
+      <footer>
+        &copy; 2014 Exceptional Realty. All Rights Reserved
+      </footer>
 
   </body>
+
+
 </html>
